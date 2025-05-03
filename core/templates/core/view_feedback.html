@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Feedback</title></head>
+<body>
+<h2>Your Feedback</h2>
+<ul>
+    {% for feedback in feedbacks %}
+        <li>{{ feedback.booking.user.username }}: {{ feedback.comments }} (Rating: {{ feedback.rating }})</li>
+    {% endfor %}
+</ul>
+</body>
+</html>

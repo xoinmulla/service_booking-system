@@ -1,0 +1,72 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Home - Household Services{% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Our Household Services</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Maids -->
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="{% static 'images/maids.jpeg' %}" class="card-img-top img-fluid" alt="Maids" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Maids</h5>
+                    <p class="card-text">Professional and reliable maids to assist with your household chores.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Cleaners -->
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="{% static 'images/cleaners.jpeg' %}" class="card-img-top img-fluid" alt="Cleaners" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Cleaners</h5>
+                    <p class="card-text">Expert cleaning services to keep your home spotless and tidy.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Cooks -->
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="{% static 'images/cooks.jpeg' %}" class="card-img-top img-fluid" alt="Cooks" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Cooks</h5>
+                    <p class="card-text">Skilled cooks to prepare delicious meals for your family.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Helpers -->
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="{% static 'images/helpers.jpeg' %}" class="card-img-top img-fluid" alt="Helpers" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Helpers</h5>
+                    <p class="card-text">General helpers to assist with various household tasks.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Caretakers -->
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="{% static 'images/caretakers.jpeg' %}" class="card-img-top img-fluid" alt="Caretakers" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Caretakers</h5>
+                    <p class="card-text">Compassionate caretakers to look after your loved ones.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Security -->
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="{% static 'images/security.jpeg' %}" class="card-img-top img-fluid" alt="Security" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Security</h5>
+                    <p class="card-text">Trained security personnel to ensure the safety of your home.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

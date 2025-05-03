@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Manage Locations{% endblock %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="container mt-4">
+    <h2 class="text-center">Manage Locations</h2>
+    <form method="post" class="mt-3">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary">Add Location</button>
+    </form>
+    <h3 class="mt-4">Existing Locations</h3>
+    <ul class="list-group mt-3">
+        {% for location in locations %}
+            <li class="list-group-item">{{ location.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

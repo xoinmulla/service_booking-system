@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Worker Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Welcome, {{ user.username }}</h2>
+    <h3 class="mt-4">Your Bookings</h3>
+    <ul class="list-group mt-3">
+        {% for booking in bookings %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                    <strong>Booking by:</strong> {{ booking.user.username }}<br>
+                    <strong>Status:</strong> {{ booking.status }}
+                </div>
+                {% if booking.status != 'accepted' %}
+                    <a href="{% url 'accept_booking' booking.id %}" class="btn btn-success btn-sm">Accept</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="mt-4">
+        <a href="{% url 'create_worker_profile' %}" class="btn btn-primary">Create/Update Profile</a>
+        <a href="{% url 'view_feedback' %}" class="btn btn-secondary">View Feedback</a>
+    </div>
+</div>
+{% endblock %}

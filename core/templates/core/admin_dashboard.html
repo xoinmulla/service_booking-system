@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Admin Dashboard</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Manage Services</h5>
+                    <p class="card-text">Add, update, or delete services offered.</p>
+                    <a href="{% url 'manage_services' %}" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Manage Locations</h5>
+                    <p class="card-text">Add or update service locations.</p>
+                    <a href="{% url 'manage_locations' %}" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Approve Users</h5>
+                    <p class="card-text">Approve pending user registrations.</p>
+                    <a href="{% url 'proceed_user_registration' %}" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
